@@ -44,7 +44,7 @@ char *ft_strchr(char *s, int c)
     {
         if (s[i] == (char)c)
             return s + i;
-        i++:
+        i++;
     }
     return NULL;
 }
@@ -213,4 +213,5 @@ char *get_next_line(int fd)
         }
         b[total_read] = '\0';
     }
+
 }
