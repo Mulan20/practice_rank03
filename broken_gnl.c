@@ -206,7 +206,7 @@ char *get_next_line(int fd)
         if (total_read <= 0)
         {
             b[0] = '\0';
-            if (*result && result)
+            if (result && *result)
                 return result;
             free(result);
             return NULL; 
@@ -215,3 +215,4 @@ char *get_next_line(int fd)
     }
 
 }
+
