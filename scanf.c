@@ -14,9 +14,9 @@ int match_space(FILE *f)
         return -1;
     while (ch != EOF)
     {
-        if (!is_space(ch))
+        if (!isspace(ch))
         {
-            unget(ch, f);
+            ungetc(ch, f);
             break;
         }
         ch = fgetc(f);
@@ -58,11 +58,11 @@ int scan_int(FILE *f, va_list ap)
     int sign = 1;
     int count = 0;
 
-    if (isspace(ch))
-        ch = fgetc(f);
-
     if (ch == EOF)
         return -1;
+	
+    while (isspace(ch))
+        ch = fgetc(f);
 
     if (ch == '+')
         ch = fgetc(f);
@@ -79,7 +79,7 @@ int scan_int(FILE *f, va_list ap)
     }
         while (isdigit(ch))
     {
-        value += value * 10 + (ch - '0');
+        value = value * 10 + (ch - '0');
         count++;
         ch = fgetc(f);
     }
@@ -181,4 +181,5 @@ int ft_scanf(const char *format, ...)
 	int ret = ft_vfscanf(stdin, format, ap);
 	va_end(ap);
 	return ret;
+
 }
