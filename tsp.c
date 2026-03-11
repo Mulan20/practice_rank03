@@ -74,7 +74,7 @@ int main(void) //you don't need to read from the user input but the fiel
     while (n < 11 && (fscanf(stdin, "%f, %f", &cities[n].x, &cities[n].y) == 2)) //don't forget &
         n++;
 
-    if (n < 2)
+    if (n < 2) //this must be less than 2 not 0
     {
         //write(1, "\n", 1);
         printf("0.00\n"); 
@@ -91,4 +91,5 @@ int main(void) //you don't need to read from the user input but the fiel
     //     return 1;
     printf("%.2f\n", min_distance); //it should be %.2f\n not %d
     return 0;
+
 }
