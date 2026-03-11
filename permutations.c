@@ -93,10 +93,11 @@ int main(int ac, char **av)
         return 1;
     char *sorted_string = ft_sort(av[1]);
 
-    permute(0, sorted_string, &result);
+    permute(0, sorted_string, result);
     free(result);
     return 0;
 
 }
+
 
 
