@@ -54,7 +54,7 @@ void permute(int pos, char *sorted_string, char *result)
     }
 
     int i = 0;
-    while (i < len)
+    while (i < len) //this must be len not index 
     {
         if (!ft_strchr(result, sorted_string[i]))
         {
@@ -98,4 +98,5 @@ int main(int ac, char **av)
     return 0;
 
 }
+
 
