@@ -74,7 +74,7 @@ int main(int ac, char **av)
         return 1;
     //you need to check len immediately
     int len = ft_strlen(av[1]);
-    if (len == 0 || ( av[1][0] == ' ' &&!av[1][1]))
+    if (len == 0 || ( av[1][0] == ' ' &&!av[1][1])) //it should be || and && 
         return 1;
     //you need to check whether it includes only the char or not
     int i =0;
@@ -96,4 +96,5 @@ int main(int ac, char **av)
     permute(0, sorted_string, &result);
     free(result);
     return 0;
+
 }
