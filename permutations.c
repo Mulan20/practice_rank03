@@ -87,7 +87,7 @@ int main(int ac, char **av)
 
    
     char *result; 
-    result = (char *)calloc(len + 1, 1);
+    result = (char *)calloc(len + 1, 1); //dont' forget that this is calloc 
     //don't forget to check this 
     if (!result)
         return 1;
@@ -98,3 +98,4 @@ int main(int ac, char **av)
     return 0;
 
 }
+
