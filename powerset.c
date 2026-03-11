@@ -73,7 +73,7 @@ void backtrack(int *set, int *subset, int setsize, int subset_size, int current_
 {
     if (set_size == pos)
     {
-        if (current_sum == target)
+        if (current_sum == target) //don't forget this condition or else it would print everything 
         {
             print_result(subset, subset_size);
             *found = 1;
@@ -139,4 +139,5 @@ int main(int ac, char **av)
       free(set);
       free(subset);
       return 0;
+
 }
